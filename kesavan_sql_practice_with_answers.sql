@@ -1,0 +1,21 @@
+-- SQL Practice Queries by Kesavan Balaji
+
+-- HackerRank Problem Solutions
+-- Revising the Select Query ISELECT * FROM city WHERE population > 100000;
+-- Revising the Select Query IISELECT name FROM city WHERE population > 120000 AND countrycode = 'USA';
+-- Select AllSELECT * FROM city;
+-- Select By IDSELECT * FROM city WHERE id = 1661;
+-- Japanese Cities' AttributesSELECT * FROM city WHERE countrycode = 'JPN';
+-- Japanese Cities' NamesSELECT name FROM city WHERE countrycode = 'JPN';
+-- Weather Observation Station 1SELECT city, state FROM station;
+-- Weather Observation Station 3SELECT DISTINCT city FROM station WHERE MOD(id, 2) = 0;
+
+-- ChatGPT Practice Queries
+-- Get all active (not soft-deleted) ordersSELECT * FROM orders WHERE deleted_at IS NULL;
+-- Get all orders with amount > 1000SELECT * FROM orders WHERE amount > 1000;
+-- Get customers whose names start with 'C'SELECT * FROM customers WHERE name LIKE 'C%';
+-- Insert new customer DivyaINSERT INTO customers (id, name, email) VALUES (4, 'Divya', 'divya@mail.com');
+-- Update email of customer with ID 3UPDATE customers SET email = 'charles.updated@mail.com' WHERE id = 3;
+-- Insert invalid order with negative amount (should fail due to CHECK)INSERT INTO orders (id, customer_id, amount) VALUES (105, 2, -500);
+-- Insert valid order using default valuesINSERT INTO orders (id, customer_id, amount) VALUES (106, 2, 750);
+-- Soft delete order by updating deleted_atUPDATE orders SET deleted_at = '2025-07-29' WHERE id = 103;
